@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #0d1016;
+  --color-light: #f6f6f6;
+  --color-border: #0d10161a;
+  --color-danger: #e6004d;
+
+  --font-custom: "Karla", sans-serif;
+}
+
+[theme="dark"] {
+  --color-light: #0d1016;
+  --color-dark: #f6f6f6;
+  --color-border: #f6f6f620;
+  --color-danger: #e6004d;
+}
+
+:root,
+[theme="light"] {
+  --color-dark: #0d1016;
+  --color-light: #f6f6f6;
+  --color-border: #0d10161a;
+  --color-danger: #e6004d;
+}
+
+body {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-family: var(--font-custom);
+}
