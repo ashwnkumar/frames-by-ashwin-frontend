@@ -13,7 +13,7 @@ import { apiConfig } from "../utils/apiConfig";
 import ModalComponent from "./ModalComponent";
 
 function Lightbox({ images = [], initialIndex = 0, onClose }) {
-  const {setLoading} = useAuth()
+ 
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const { loading, setLoading } = useAuth();
 
