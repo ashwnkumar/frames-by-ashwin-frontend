@@ -11,7 +11,7 @@ const About = () => {
     ?.replaceAll("/", "");
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-12 flex flex-col gap-10">
+    <div className="w-full max-w-6xl mx-auto px-4 py-5 flex flex-col gap-10">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
         <h1 className="text-4xl font-bold text-gray-900 md:w-1/2">

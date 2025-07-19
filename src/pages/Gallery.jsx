@@ -37,10 +37,18 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen  flex flex-col items-center justify-start">
+    <div className="w-full min-h-screen flex flex-col items-center justify-start">
       <PageHeader title="Gallery" buttons={token ? headerButtons : []} />
       {photos.length === 0 ? (
-        <p className="text-gray-700 text-sm">No photos found</p>
+        <div className="flex flex-col items-center justify-center h-[40vh] w-full mt-6 px-4 text-center text-gray-700">
+          <h2 className="text-2xl font-semibold mb-2">
+            No photos to display yet
+          </h2>
+          <p className="max-w-md">
+            The gallery is currently empty — the photographer is busy capturing
+            amazing moments. Please check back soon for beautiful photos!
+          </p>
+        </div>
       ) : (
         <LightboxGallery images={photos} fetchPhotos={getPhotos} />
       )}

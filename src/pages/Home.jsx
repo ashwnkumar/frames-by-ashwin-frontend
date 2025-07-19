@@ -60,7 +60,7 @@ const Home = () => {
         </div>
 
         {/* Hero Image */}
-        <div className="w-full md:w-1/2 min-h-[250px] md:h-full relative group">
+        <div className="w-full md:w-1/2 min-h-[250px] md:h-full relative group mt-20">
           <img
             src={imageUrl}
             alt="Gallery cover"
@@ -71,11 +71,15 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-full flex flex-col items-start justify-center gap-6">
-        <h2 className="text-3xl md:text-5xl font-medium">Gallery Picks</h2>
-
-        <LightboxGallery images={featured} fetchPhotos={fetchFeaturedPhotos} />
-      </section>
+      {featured.length > 0 && (
+        <section className="w-full flex flex-col items-start justify-center gap-6">
+          <h2 className="text-3xl md:text-5xl font-medium">Gallery Picks</h2>
+          <LightboxGallery
+            images={featured}
+            fetchPhotos={fetchFeaturedPhotos}
+          />
+        </section>
+      )}
     </main>
   );
 };

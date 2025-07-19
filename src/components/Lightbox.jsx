@@ -99,7 +99,7 @@ function Lightbox({ images = [], initialIndex = 0, onClose }) {
           e.stopPropagation();
           setCurrentIndex((i) => (i - 1 + images.length) % images.length);
         }}
-        className="absolute top-1/2 left-4 bg-light text-dark rounded-full pe-0.5 text-3xl"
+        className="absolute top-1/2 left-4 bg-light text-dark rounded-full  text-3xl"
         aria-label="Previous image"
       >
         <ChevronLeft size={32} />
@@ -109,7 +109,7 @@ function Lightbox({ images = [], initialIndex = 0, onClose }) {
           e.stopPropagation();
           setCurrentIndex((i) => (i + 1) % images.length);
         }}
-        className="absolute top-1/2 right-4 bg-light text-dark rounded-full ps-0.5 text-3xl"
+        className="absolute top-1/2 right-4 bg-light text-dark rounded-full  text-3xl"
         aria-label="Next image"
       >
         <ChevronRight size={32} />

@@ -15,7 +15,7 @@ const Layout = () => {
       <div className="sticky top-0 z-50   ">
         <Navbar />
       </div>
-      <main className="w-full  flex items-center justify-center py-15">
+      <main className="w-full  flex items-center justify-center ">
         <div className="w-full md:max-w-[80vw] min-h-screen flex justify-center mx-5 items-start ">
           <Outlet />
         </div>
