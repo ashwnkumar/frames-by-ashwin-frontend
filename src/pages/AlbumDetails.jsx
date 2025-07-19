@@ -22,18 +22,7 @@ const AlbumDetails = () => {
   const [photos, setPhotos] = useState([]);
   const [album, setAlbum] = useState([]);
 
-  const fetchPhotos = async () => {
-    try {
-      const res = await axiosInstance.get(
-        apiConfig.photos.getPhotosByAlbum(albumId)
-      );
-      const { photos } = res.data.data;
-      setPhotos(photos);
-    } catch (error) {
-      console.error("Error fetching photos:", error);
-      toast.error(error.response.data.message || "Error fetching photos");
-    }
-  };
+
 
   const getAlbumDetails = async () => {
     try {
@@ -80,7 +69,7 @@ const AlbumDetails = () => {
           {token && <Button label={"Add Photos"} navTo={`/upload`} />}
         </div>
       ) : (
-        <LightboxGallery images={photos} />
+        <LightboxGallery images={photos} fetchPhotos={fetchPhotos} />
       )}
     </div>
   );

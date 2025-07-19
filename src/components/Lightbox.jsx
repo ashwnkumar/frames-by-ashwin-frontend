@@ -13,7 +13,6 @@ import { apiConfig } from "../utils/apiConfig";
 import ModalComponent from "./ModalComponent";
 
 function Lightbox({ images = [], initialIndex = 0, onClose }) {
- 
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const { loading, setLoading } = useAuth();
 
@@ -119,7 +118,7 @@ function Lightbox({ images = [], initialIndex = 0, onClose }) {
   );
 }
 
-export default function LightboxGallery({ images = [] }) {
+export default function LightboxGallery({ images = [], fetchPhotos }) {
   const { token, setLoading } = useAuth();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [startIndex, setStartIndex] = useState(0);
@@ -139,7 +138,7 @@ export default function LightboxGallery({ images = [] }) {
       toast.error(error.response.data.message || "Error deleting photo");
     } finally {
       setLoading(false);
-    }   
+    }
   };
 
   const deleteModalButtons = [

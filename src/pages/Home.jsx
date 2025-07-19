@@ -74,7 +74,7 @@ const Home = () => {
       <section className="w-full flex flex-col items-start justify-center gap-6">
         <h2 className="text-3xl md:text-5xl font-medium">Gallery Picks</h2>
 
-        <LightboxGallery images={featured} />
+        <LightboxGallery images={featured} fetchPhotos={fetchFeaturedPhotos} />
       </section>
     </main>
   );

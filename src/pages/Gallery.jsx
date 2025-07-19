@@ -42,7 +42,7 @@ const Gallery = () => {
       {photos.length === 0 ? (
         <p className="text-gray-700 text-sm">No photos found</p>
       ) : (
-        <LightboxGallery images={photos} />
+        <LightboxGallery images={photos} fetchPhotos={getPhotos} />
       )}
     </div>
   );
