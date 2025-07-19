@@ -156,7 +156,7 @@ export default function LightboxGallery({ images = [], fetchPhotos }) {
 
   return (
     <>
-      <div className="columns-1 sm:columns-2 md:columns-3 gap-10 space-y-10">
+      <div className="columns-2 sm:columns-2 md:columns-3 md:gap-8 gap-4 md:space-y-8 space-y-4">
         {images.map((photo, i) => (
           <div
             key={photo._id}

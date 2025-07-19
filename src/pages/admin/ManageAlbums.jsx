@@ -75,7 +75,7 @@ const ManageAlbums = () => {
     console.log("formData from handlesubmit", formData);
     if (!validateForm())
       return toast.error(
-        "error.response.data.message || Please fill all the required fields"
+        error.response.data.message || "Please fill all the required fields"
       );
 
     try {

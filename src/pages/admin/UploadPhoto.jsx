@@ -29,7 +29,7 @@ const UploadPhoto = () => {
   const handleUpload = async () => {
     if (!validateForm())
       return toast.error(
-        "error.response.data.message || Please fill all the required fields"
+        error.response.data.message || "Please fill all the required fields"
       );
 
     try {
@@ -159,7 +159,6 @@ const UploadPhoto = () => {
       ],
     },
   ];
-
 
   const headerButtons = [
     { label: "Add Photo", onClick: handleUpload, className: "md:!text-xl " },

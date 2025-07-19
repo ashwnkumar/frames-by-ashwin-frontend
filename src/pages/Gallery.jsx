@@ -17,7 +17,6 @@ const Gallery = () => {
     try {
       setLoading(true);
       const res = await axiosInstance.get(apiConfig.photos.getPhotos);
-      console.log("res from fetch call", res);
       const { photos } = res.data.data;
       setPhotos(photos);
     } catch (error) {
