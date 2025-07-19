@@ -120,7 +120,7 @@ function Lightbox({ images = [], initialIndex = 0, onClose }) {
 }
 
 export default function LightboxGallery({ images = [] }) {
-  const { token } = useAuth();
+  const { token, setLoading } = useAuth();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [startIndex, setStartIndex] = useState(0);
   const [deleteItem, setDeleteItem] = useState(null);
@@ -157,8 +157,7 @@ export default function LightboxGallery({ images = [] }) {
 
   return (
     <>
-      {/* Masonry grid using columns */}
-      <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
+      <div className="columns-1 sm:columns-2 md:columns-3 gap-10 space-y-10">
         {images.map((photo, i) => (
           <div
             key={photo._id}
@@ -172,7 +171,7 @@ export default function LightboxGallery({ images = [] }) {
               src={photo.previewUrl}
               alt={photo.title}
               loading="lazy"
-              className="w-full h-auto object-cover rounded"
+              className="w-full h-auto object-cover rounded-lg"
             />
             {token && (
               <button
